@@ -1,0 +1,17 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  margin-bottom: 2rem;
+  width: 50%;
+
+  &__title {
+  }
+
+  &__image-container {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}

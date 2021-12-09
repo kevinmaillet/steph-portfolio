@@ -1,0 +1,39 @@
+.wrapper {
+  margin: 5%;
+  display: flex;
+}
+
+.main {
+  width: 75%;
+  margin-top: 4rem;
+}
+
+.header-wrapper {
+  position: relative;
+  width: 20%;
+}
+
+.header {
+  position: fixed;
+  &__logo {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    color: #101010;
+    white-space: nowrap;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    border-left: solid black 2px;
+    margin-left: 1rem;
+
+    &-link {
+      padding: 0.5rem 0;
+      margin-left: 1.5rem;
+      max-width: 4rem;
+    }
+  }
+}

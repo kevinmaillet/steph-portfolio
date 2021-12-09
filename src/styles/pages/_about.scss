@@ -1,0 +1,45 @@
+.about {
+  &__title {
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    color: #3f3f3f;
+    padding-bottom: 3rem;
+  }
+
+  &__paragraph > * {
+    margin: 0 auto;
+    max-width: 65ch;
+    padding-left: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 148.8%;
+    color: #3f3f3f;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.research-methods {
+  margin-top: 6rem;
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    color: rgb(112, 112, 112);
+    padding-bottom: 1rem;
+  }
+
+  .about-list {
+    ul {
+      border-left: solid black 2px;
+      background: -webkit-linear-gradient(#558900, #c70ff5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    li {
+      padding: 0.25rem 0;
+      margin-left: 2rem;
+    }
+  }
+}
