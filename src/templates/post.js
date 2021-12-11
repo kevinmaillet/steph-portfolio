@@ -1,19 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import '@wordpress/block-library/build-style/style.css';
-import '@wordpress/block-library/build-style/theme.css';
+import '../styles/vendor/@wordpress/build-style/style.css';
+import '../styles/vendor/@wordpress/build-style/theme.css';
 
 const BlogPostTemplate = ({ data }) => {
+  console.log(data.wpPost.content);
   return (
     <Layout>
-      <main className="wp-post">
-        <h1 className="wp-post__title">{data.wpPost.title}</h1>
-        <div
+      <section className="wp-post">
+        <div className="wp-post__title">
+          <h1>{data.wpPost.title}</h1>
+        </div>
+
+        <article
           dangerouslySetInnerHTML={{ __html: data.wpPost.content }}
           className="wp-post__content"
         />
-      </main>
+      </section>
     </Layout>
   );
 };

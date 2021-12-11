@@ -4,7 +4,10 @@
 }
 
 .main {
-  width: 75%;
+  // padding-left: 25%;
+  width: 100%;
+  max-width: 1024px;
+  // padding-left: 20%; //changed
   margin-top: 4rem;
 }
 
@@ -15,6 +18,7 @@
 
 .header {
   position: fixed;
+  z-index: 500;
   &__logo {
     font-family: 'MuseoModerno', cursive;
     font-size: 24px;

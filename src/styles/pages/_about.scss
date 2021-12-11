@@ -33,6 +33,7 @@
     ul {
       border-left: solid black 2px;
       background: -webkit-linear-gradient(#558900, #c70ff5);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -40,6 +41,7 @@
     li {
       padding: 0.25rem 0;
       margin-left: 2rem;
+      list-style: none;
     }
   }
 }

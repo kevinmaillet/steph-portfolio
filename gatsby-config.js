@@ -15,32 +15,25 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-transformer-sharp',
+      // options: {
+      //   formats: ['auto', 'webp'],
+      //   quality: 100,
+      //   breakpoints: [750, 1080, 1366, 1920],
+      // },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: 'assets',
+        path: `${__dirname}/content/assets`,
       },
-      __key: 'images',
     },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        // Remote schema query type. This is an arbitrary name.
-        // typeName: 'WPGraphQL',
-        // Field name under which it will be available. Used in your Gatsby query. This is also an arbitrary name.
-        // fieldName: 'wpcontent',
-        // GraphQL endpoint, relative to your WordPress home URL.
         url: 'https://wp.stephmeltzer.com/graphql',
-        // html: {
-        //   useGatsbyImage: true,
-        //   imageQuality: 90,
-        //   createStaticFiles: true,
-        // },
-        // develop: {
-        //   hardCacheMediaFiles: true,
-        // },
       },
     },
   ],
