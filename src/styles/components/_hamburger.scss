@@ -12,6 +12,12 @@
       display: inline-block;
     }
   }
+  //Mobile
+  @media screen and (max-width: 600px) {
+    & {
+      padding-right: 2px;
+    }
+  }
 }
 
 .bar1,
@@ -28,7 +34,8 @@
 .animate-hamburger {
   .bar1 {
     transform-origin: right;
-    transform: rotate(-45deg) translate(1px, -1px);
+    transform: rotate(-45deg) translate(-7px, -2px);
+
     transition: transform 0.2s;
   }
 
@@ -38,7 +45,7 @@
 
   .bar3 {
     transform-origin: right;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(-1px, 8px);
     transition: transform 0.2s;
   }
 }
