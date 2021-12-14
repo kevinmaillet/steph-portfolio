@@ -1,0 +1,44 @@
+.hamburger {
+  align-self: center;
+  transform: translateY(2px);
+  display: none;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10000;
+
+  //Tablet
+  @media screen and (max-width: 780px) {
+    & {
+      display: inline-block;
+    }
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #101010;
+  transition: 0.4s;
+}
+
+.animate-hamburger {
+  .bar1 {
+    transform-origin: right;
+    transform: rotate(-45deg) translate(1px, -1px);
+    transition: transform 0.2s;
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    transform-origin: right;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+  }
+}

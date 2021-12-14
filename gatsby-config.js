@@ -17,11 +17,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-sharp',
-      // options: {
-      //   formats: ['auto', 'webp'],
-      //   quality: 100,
-      //   breakpoints: [750, 1080, 1366, 1920],
-      // },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -38,5 +33,3 @@ module.exports = {
     },
   ],
 };
-
-//.gatsby-image-wrapper [data-main-image]

@@ -22,10 +22,10 @@ const About = ({ data }) => {
       </section>
 
       <section className="research-methods">
-        <h3 className="research-methods__title">Research Methods</h3>
+        <h3 className="research-methods__title">Methods</h3>
         <div
           dangerouslySetInnerHTML={{
-            __html: posts.find((post) => post.title === 'List').content,
+            __html: posts.find((post) => post.title === 'Methods').content,
           }}
           className="about-list"
         />
@@ -36,7 +36,7 @@ const About = ({ data }) => {
 
 export const query = graphql`
   query getListAndAbout {
-    allWpPost(filter: { title: { in: ["List", "About"] } }) {
+    allWpPost(filter: { title: { in: ["Methods", "About"] } }) {
       edges {
         node {
           title

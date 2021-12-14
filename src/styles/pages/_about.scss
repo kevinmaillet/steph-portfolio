@@ -1,11 +1,4 @@
 .about {
-  &__title {
-    font-size: 24px;
-    letter-spacing: 0.03em;
-    color: #3f3f3f;
-    padding-bottom: 3rem;
-  }
-
   &__paragraph > * {
     margin: 0 auto;
     max-width: 65ch;
@@ -13,7 +6,6 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 148.8%;
-    color: #3f3f3f;
     margin-bottom: 1.5rem;
   }
 }
@@ -25,7 +17,7 @@
     font-weight: 600;
     line-height: 21px;
     letter-spacing: 0.03em;
-    color: rgb(112, 112, 112);
+    color: var(--color-text-light);
     padding-bottom: 1rem;
   }
 

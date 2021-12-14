@@ -1,17 +1,21 @@
-.projects {
+.project-display {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .project {
-  margin-bottom: 2rem;
-  width: 50%;
+  width: 400px;
+  padding: 1rem 0;
 
   &__title {
+    margin-top: 1rem;
   }
 
-  &__image-container {
-    width: 90%;
-    margin-bottom: 1rem;
+  //Tablet
+  @media screen and (max-width: 780px) {
+    & {
+      width: 100%;
+    }
   }
 }

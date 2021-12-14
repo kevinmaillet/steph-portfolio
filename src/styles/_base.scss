@@ -2,25 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
 @import url('https://use.typekit.net/pix0rnt.css');
 
-// *,
-// *::after,
-// *::before {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: inherit;
-// }
-
-// html {
-//   font-size: 16px;
-//   font-family: 'Work Sans', sans-serif;
-//   background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
-//   box-sizing: border-box;
-// }
-
-// body {
-//   min-height: 100vh;
-// }
-
 a {
   text-decoration: none;
   color: black;
@@ -86,6 +67,7 @@ a {
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --tablet-size: 47.87rem;
 }
 
 /* HTML elements */
@@ -107,6 +89,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  margin: 5%;
 }
 
 footer {
@@ -221,26 +204,6 @@ li > ul {
   margin-left: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
 }
-
-// blockquote {
-//   color: var(--color-text-light);
-//   margin-left: calc(-1 * var(--spacing-6));
-//   margin-right: var(--spacing-8);
-//   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-//   border-left: var(--spacing-1) solid var(--color-primary);
-//   font-size: var(--fontSize-2);
-//   font-style: italic;
-//   margin-bottom: var(--spacing-8);
-// }
-
-// blockquote > :last-child {
-//   margin-bottom: var(--spacing-0);
-// }
-
-// blockquote > ul,
-// blockquote > ol {
-//   list-style-position: inside;
-// }
 
 table {
   width: 100%;
