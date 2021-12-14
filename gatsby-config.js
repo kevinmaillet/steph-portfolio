@@ -29,6 +29,9 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: 'https://wp.stephmeltzer.com/graphql',
+        schema: {
+          requestConcurrency: 50,
+        },
       },
     },
   ],
