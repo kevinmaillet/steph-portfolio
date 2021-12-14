@@ -15,46 +15,48 @@ const Nav = () => {
   };
 
   return (
-    <nav className={`nav ${isNavOpen ? 'nav--active' : ''}`}>
-      <div className="nav__items">
-        <Link
-          to="/about"
-          className={`nav__link ${
-            isActivePage === 'About' ? 'nav__link--active' : ''
-          }`}
-          onClick={handleClick}
-        >
-          About
-        </Link>
-        <Link
-          to="/projects"
-          className={`nav__link ${
-            isActivePage === 'Projects' ? 'nav__link--active' : ''
-          }`}
-          onClick={handleClick}
-        >
-          Projects
-        </Link>
-        <Link
-          to="/ideas"
-          className={`nav__link ${
-            isActivePage === 'Ideas' ? 'nav__link--active' : ''
-          }`}
-          onClick={handleClick}
-        >
-          Ideas
-        </Link>
-        <Link
-          to="/contact"
-          className={`nav__link ${
-            isActivePage === 'Contact' ? 'nav__link--active' : ''
-          }`}
-          onClick={handleClick}
-        >
-          Contact
-        </Link>
-      </div>
-    </nav>
+    <div className="nav-container">
+      <nav className={`nav ${isNavOpen ? 'nav--active' : ''}`}>
+        <div className="nav__items">
+          <Link
+            to="/about"
+            className={`nav__link ${
+              isActivePage === 'About' ? 'nav__link--active' : ''
+            }`}
+            onClick={handleClick}
+          >
+            About
+          </Link>
+          <Link
+            to="/projects"
+            className={`nav__link ${
+              isActivePage === 'Projects' ? 'nav__link--active' : ''
+            }`}
+            onClick={handleClick}
+          >
+            Projects
+          </Link>
+          <Link
+            to="/ideas"
+            className={`nav__link ${
+              isActivePage === 'Ideas' ? 'nav__link--active' : ''
+            }`}
+            onClick={handleClick}
+          >
+            Ideas
+          </Link>
+          <Link
+            to="/contact"
+            className={`nav__link ${
+              isActivePage === 'Contact' ? 'nav__link--active' : ''
+            }`}
+            onClick={handleClick}
+          >
+            Contact
+          </Link>
+        </div>
+      </nav>
+    </div>
   );
 };
 

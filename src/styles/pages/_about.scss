@@ -24,7 +24,16 @@
   .about-list {
     ul {
       border-left: solid black 2px;
+      background: -moz-linear-gradient(#558900, transparent); /* FF 3.6+ */
       background: -webkit-linear-gradient(#558900, #c70ff5);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, #558900),
+        color-stop(100%, #c70ff5)
+      ); /* Safari 4+, Chrome 2+ */
+
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
