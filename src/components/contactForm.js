@@ -64,7 +64,12 @@ const ContactForm = () => {
       </label>
       <label className="contact-form__subject">
         <span>Subject</span>
-        <input type="text" placeholder="Hi there" onChange={handleChange} />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Hi there"
+          onChange={handleChange}
+        />
       </label>
       <label className="contact-form__message">
         <span>Message</span>
