@@ -11,6 +11,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             id
             slug
+            categories {
+              nodes {
+                name
+              }
+            }
           }
         }
       }
@@ -22,7 +27,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const BlogPosts = result.data.allWpPost.edges;
+  const BlogPosts = result.data.allWpPost.edges.filter(
+    ({ node }) => node.categories.nodes[0].name === 'Projects'
+  );
+
   BlogPosts.forEach((post) => {
     createPage({
       path: `/projects/${post.node.slug}`,

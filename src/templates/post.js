@@ -1,13 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import '../styles/vendor/@wordpress/build-style/style.css';
 import '../styles/vendor/@wordpress/build-style/theme.css';
 
 const BlogPostTemplate = ({ data }) => {
-  console.log(data.wpPost.content);
   return (
     <Layout>
+      <Seo title={data.wpPost.title} description={data.wpPost.excerpt} />
+
       <section className="wp-post">
         <div className="wp-post__title">
           <h1>{data.wpPost.title}</h1>
@@ -28,6 +30,7 @@ export const query = graphql`
     wpPost(id: { eq: $id }) {
       title
       content
+      excerpt
     }
   }
 `;

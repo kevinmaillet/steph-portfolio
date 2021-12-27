@@ -1,21 +1,22 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 
 const About = ({ data }) => {
-  const posts = data.allWpPost.edges.map(({ node }) => {
-    return { title: node.title, content: node.content };
-  });
+  const about = data.allWpPost.edges.find(({ node }) => node.title === 'About');
+  const methods = data.allWpPost.edges.find(
+    ({ node }) => node.title === 'Methods'
+  );
 
   return (
     <Layout>
+      <Seo title="About" description={about.node.excerpt} />
       <section className="about">
-        <h2 className="about__title">
-          {posts.find((post) => post.title === 'About').title}
-        </h2>
+        <h2 className="about__title">{about.node.title}</h2>
         <div
           dangerouslySetInnerHTML={{
-            __html: posts.find((post) => post.title === 'About').content,
+            __html: about.node.content,
           }}
           className="about__paragraph"
         />
@@ -25,7 +26,7 @@ const About = ({ data }) => {
         <h3 className="research-methods__title">Methods</h3>
         <div
           dangerouslySetInnerHTML={{
-            __html: posts.find((post) => post.title === 'Methods').content,
+            __html: methods.node.content,
           }}
           className="about-list"
         />
@@ -41,6 +42,7 @@ export const query = graphql`
         node {
           title
           content
+          excerpt
         }
       }
     }

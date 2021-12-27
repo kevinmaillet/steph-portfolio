@@ -1,6 +1,5 @@
 .contact-form {
-  max-width: 50%;
-  min-width: 21rem;
+  max-width: 75%;
   margin: 0 auto;
 
   > * {
@@ -55,5 +54,12 @@
     color: black;
     width: 100%;
     display: block;
+  }
+
+  //Tablet
+  @media screen and (max-width: 780px) {
+    & {
+      max-width: 100%;
+    }
   }
 }

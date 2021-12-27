@@ -1,17 +1,28 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.stephmeltzer.com',
-    title: 'steph-portfolio',
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/thanks', '/404'],
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        name: `Steph Meltzer Portfolio`,
+        short_name: `Steph Meltzer`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: 'content/assets/favicon.png',
       },
     },
     'gatsby-plugin-sharp',
