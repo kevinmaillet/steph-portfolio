@@ -1,0 +1,17 @@
+.ideas {
+
+    &__button {
+        border: 1px solid black;
+        background-color: #ffffff;
+        padding: .75rem 1rem;
+        transition: .2s ease;
+
+        &:hover { 
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+    }
+
+
+}

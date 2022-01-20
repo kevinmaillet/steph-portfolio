@@ -23,7 +23,7 @@ const About = ({ data }) => {
       </section>
 
       <section className="research-methods">
-        <h3 className="research-methods__title">Methods</h3>
+        <h2 className="research-methods__title">Methods</h2>
         <div
           dangerouslySetInnerHTML={{
             __html: methods.node.content,

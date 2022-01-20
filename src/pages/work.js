@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-const Projects = ({ data }) => {
+const Work = ({ data }) => {
   const displayProjectTitles = data.allWpPost.edges
     .filter(({ node }) => node.categories.nodes[0].name === 'Projects')
     .map(({ node }) => (
@@ -23,9 +23,9 @@ const Projects = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Projects" />
+      <Seo title="Work" />
       <section className="projects">
-        <h2 className="ideas__title">Projects</h2>
+        <h2 className="projects__title">Work</h2>
         <div className="project-display">{displayProjectTitles}</div>
       </section>
     </Layout>
@@ -67,4 +67,4 @@ export const query = graphql`
   }
 `;
 
-export default Projects;
+export default Work;

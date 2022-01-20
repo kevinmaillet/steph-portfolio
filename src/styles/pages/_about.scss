@@ -12,31 +12,11 @@
 
 .research-methods {
   margin-top: 6rem;
-  &__title {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 21px;
-    letter-spacing: 0.03em;
-    color: var(--color-text-light);
-    padding-bottom: 1rem;
-  }
+
 
   .about-list {
     ul {
-      border-left: solid black 2px;
-      // background: -moz-linear-gradient(#558900, transparent); /* FF 3.6+ */
-      // background: -webkit-linear-gradient(#558900, #c70ff5);
-      // background: -webkit-gradient(
-      //   linear,
-      //   left top,
-      //   left bottom,
-      //   color-stop(0%, #558900),
-      //   color-stop(100%, #c70ff5)
-      // ); /* Safari 4+, Chrome 2+ */
-
-      // background-clip: text;
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
+      border-left: solid black 1px;
       background-color: #558900;
       background-image: linear-gradient(#558900, #c70ff5);
       background-size: 100%;

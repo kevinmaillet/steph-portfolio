@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        excludes: ['/thanks', '/404'],
+        excludes: ['/thanks', '/404', '/404.html'],
       },
     },
     {

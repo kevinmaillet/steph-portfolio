@@ -1,35 +1,21 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-const Ideas = ({ data }) => {
-
-  const { content } = data.wpPost;
+const Ideas = () => {
 
   return (
     <Layout>
       <Seo title="Ideas" />
       <section className="ideas">
         <h2 className="ideas__title">Ideas</h2>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: content,
-          }}
-        />
+        <a href="https://www.medium.com/@smeltzer1" target="_blank" rel="noreferrer">
+          <button className='ideas__button'>Read More</button>
+        </a>
       </section>
     </Layout>
   );
 };
 
-export const query = graphql`
-query getIdeasPost {
-  wpPost(title: {eq: "Ideas"}) {
-    id
-    content
-  }
-}
-
-`;
 
 export default Ideas;

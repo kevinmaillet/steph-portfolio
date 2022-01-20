@@ -54,6 +54,12 @@
     color: black;
     width: 100%;
     display: block;
+    transition: .2s ease;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 
   //Tablet
