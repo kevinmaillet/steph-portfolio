@@ -1,5 +1,5 @@
 .about {
-  &__paragraph > * {
+  &__paragraph>* {
     margin: 0 auto;
     // max-width: 65ch;
     padding-left: 2rem;
@@ -9,7 +9,14 @@
     margin-bottom: 1.5rem;
   }
 
-  
+  //Tablet
+  @media screen and (max-width: 780px) {
+    &__paragraph>* {
+      padding-left: 0;
+    }
+  }
+
+
 }
 
 .research-methods {
