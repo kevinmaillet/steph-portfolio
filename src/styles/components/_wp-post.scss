@@ -15,7 +15,7 @@
       grid-column: 2;
     }
 
-    & > .wp-block-image {
+    & > .wp-block-image, .wp-block-columns, .wp-block-group {
       width: 100%;
       grid-column: 1 / 4;
     }
