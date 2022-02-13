@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useIntersectionObserverOnChildren from '../hooks/useIntersectionObserverOnChildren';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
@@ -6,6 +7,9 @@ import '../styles/vendor/@wordpress/build-style/style.css';
 import '../styles/vendor/@wordpress/build-style/theme.css';
 
 const BlogPostTemplate = ({ data }) => {
+  const containerRef = useRef(null)
+  useIntersectionObserverOnChildren(containerRef);
+
   return (
     <Layout>
       <Seo title={data.wpPost.title} description={data.wpPost.excerpt} />
@@ -16,6 +20,7 @@ const BlogPostTemplate = ({ data }) => {
         </div>
 
         <article
+          ref={containerRef}
           dangerouslySetInnerHTML={{ __html: data.wpPost.content }}
           className="wp-post__content"
         />

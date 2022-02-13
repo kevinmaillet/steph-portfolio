@@ -1,9 +1,12 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useRef } from 'react';
+import useIntersectionObserverOnChildren from '../hooks/useIntersectionObserverOnChildren';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
 const About = ({ data }) => {
+  const containerRef = useRef(null);
+  useIntersectionObserverOnChildren(containerRef)
   const about = data.allWpPost.edges.find(({ node }) => node.title === 'About');
   const methods = data.allWpPost.edges.find(
     ({ node }) => node.title === 'Methods'
@@ -15,6 +18,7 @@ const About = ({ data }) => {
       <section className="about">
         <h2 className="about__title">{about.node.title}</h2>
         <div
+          ref={containerRef}
           dangerouslySetInnerHTML={{
             __html: about.node.content,
           }}
