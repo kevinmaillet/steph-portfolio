@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useIntersectionObserverOnChildren = (ref, opts = {
     root: null,
     rootMargin: `0px`,
-    threshold: 0
+    threshold: .25
 }) => {
 
     useEffect(() => {

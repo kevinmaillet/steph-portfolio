@@ -250,14 +250,12 @@ input[type='submit'],
 .set-invisible {
   opacity: 0;
   visibility: hidden;
-  transform: scale(.85);
 }
 
 .set-visible {
   opacity: 1;
   visibility: visible;
-  transition: .5s ease-in;
-  transform: scale(1);
+  transition: .5s ease-out;
 }
 
 /* Media queries */
