@@ -16,7 +16,7 @@ const About = ({ data }) => {
     <Layout>
       <Seo title="About" description={about.node.excerpt} />
       <section className="about">
-        <h2 className="about__title">{about.node.title}</h2>
+        <h3 className="about__title">{about.node.title}</h3>
         <div
           ref={containerRef}
           dangerouslySetInnerHTML={{
@@ -27,7 +27,7 @@ const About = ({ data }) => {
       </section>
 
       <section className="research-methods">
-        <h2 className="research-methods__title">Methods</h2>
+        <h4 className="research-methods__title">Methods</h4>
         <div
           dangerouslySetInnerHTML={{
             __html: methods.node.content,

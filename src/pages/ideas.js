@@ -8,7 +8,7 @@ const Ideas = () => {
     <Layout>
       <Seo title="Ideas" />
       <section className="ideas">
-        <h2 className="ideas__title">Ideas</h2>
+        <h3 className="ideas__title">Ideas</h3>
         <a href="https://www.medium.com/@smeltzer1" target="_blank" rel="noreferrer">
           <button className='ideas__button'>Read More</button>
         </a>

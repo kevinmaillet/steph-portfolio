@@ -37,9 +37,9 @@ a {
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: 'mrs-eaves-xl-serif', serif;
-  --fontFamily-serif: 'Work Sans', sans-serif;
-  --font-body: var(--fontFamily-serif);
+  --fontFamily-sans: 'Work Sans', sans-serif; 
+  --fontFamily-serif: 'mrs-eaves-xl-serif', serif;
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
@@ -55,10 +55,10 @@ a {
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.074rem;
+  --fontSize-2: 1.563rem;
+  --fontSize-3: 1.953rem;
+  --fontSize-4: 2.441rem;
+  --fontSize-5: 3.9rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #115bca;
@@ -114,7 +114,7 @@ h6 {
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
-  letter-spacing: -0.025em;
+  letter-spacing: -0em;
 }
 
 h2,
@@ -134,14 +134,19 @@ h1 {
 
 h2 {
   font-size: var(--fontSize-5);
+  margin-top: 0px;
 }
 
 h3 {
   font-size: var(--fontSize-4);
+  font-family: 'mrs-eaves-xl-serif', serif;;
 }
 
 h4 {
   font-size: var(--fontSize-3);
+  font-weight: normal;
+  margin-top: 0px;
+  line-height: 2.5rem;
 }
 
 h5 {
@@ -150,6 +155,7 @@ h5 {
 
 h6 {
   font-size: var(--fontSize-1);
+  font-weight: normal;
 }
 
 h1>a {
@@ -225,7 +231,7 @@ a {
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 textarea,

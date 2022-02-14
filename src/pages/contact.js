@@ -8,7 +8,7 @@ const Contact = () => {
     <Layout>
       <Seo title="Contact" />
       <section className="contact">
-        <h2 className="contact__title">Contact</h2>
+        <h3 className="contact__title">Contact</h3>
         <ContactForm />
       </section>
     </Layout>

@@ -16,7 +16,7 @@ const Work = ({ data }) => {
             }
             alt={node.featuredImage.node.alt}
           />
-          <h4 className="project__title">{node.title}</h4>
+          <h5 className="project__title">{node.title}</h5>
         </Link>
       </article>
     ));
@@ -25,7 +25,7 @@ const Work = ({ data }) => {
     <Layout>
       <Seo title="Work" />
       <section className="projects">
-        <h2 className="projects__title">Work</h2>
+        <h3 className="projects__title">Work</h3>
         <div className="project-display">{displayProjectTitles}</div>
       </section>
     </Layout>
