@@ -5,8 +5,18 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 
 const About = ({ data }) => {
-  const containerRef = useRef(null);
-  useIntersectionObserverOnChildren(containerRef)
+  const aboutRef = useRef(null);
+  const researchRef = useRef(null);
+  useIntersectionObserverOnChildren(aboutRef, {
+    root: null,
+    rootMargin: `0px`,
+    threshold: 0
+  })
+  useIntersectionObserverOnChildren(researchRef, {
+    root: null,
+    rootMargin: `0px`,
+    threshold: 0
+  })
   const about = data.allWpPost.edges.find(({ node }) => node.title === 'About');
   const methods = data.allWpPost.edges.find(
     ({ node }) => node.title === 'Methods'
@@ -18,7 +28,7 @@ const About = ({ data }) => {
       <section className="about">
         <h3 className="about__title">{about.node.title}</h3>
         <div
-          ref={containerRef}
+          ref={aboutRef}
           dangerouslySetInnerHTML={{
             __html: about.node.content,
           }}
@@ -26,7 +36,7 @@ const About = ({ data }) => {
         />
       </section>
 
-      <section className="research-methods">
+      <section className="research-methods" ref={researchRef}>
         <h4 className="research-methods__title">Methods</h4>
         <div
           dangerouslySetInnerHTML={{
