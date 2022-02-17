@@ -37,7 +37,7 @@ a {
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: 'Work Sans', sans-serif; 
+  --fontFamily-sans: 'Work Sans', sans-serif;
   --fontFamily-serif: 'mrs-eaves-xl-serif', serif;
   --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
@@ -133,13 +133,14 @@ h1 {
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: clamp(var(--fontSize-3), 8.5vw, var(--fontSize-5));
   margin-top: 0px;
 }
 
 h3 {
   font-size: var(--fontSize-4);
-  font-family: 'mrs-eaves-xl-serif', serif;;
+  font-family: 'mrs-eaves-xl-serif', serif;
+  ;
 }
 
 h4 {

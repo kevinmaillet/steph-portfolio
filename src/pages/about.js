@@ -26,7 +26,6 @@ const About = ({ data }) => {
     <Layout>
       <Seo title="About" description={about.node.excerpt} />
       <section className="about">
-        <h3 className="about__title">{about.node.title}</h3>
         <div
           ref={aboutRef}
           dangerouslySetInnerHTML={{
