@@ -21,6 +21,21 @@
     }
 
 
+    //Mobile
+    @media screen and (max-width: 480px) {
+      &>.wp-block-file {
+        display: flex;
+        flex-direction: column;
+
+        &>* {
+          padding: 2px 0;
+        }
+      }
+    }
+
+
+
+
 
     ul,
     ol {
