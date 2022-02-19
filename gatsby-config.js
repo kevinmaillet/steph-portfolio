@@ -49,7 +49,7 @@ module.exports = {
       options: {
         url: 'https://wp.stephmeltzer.com/graphql',
         schema: {
-          requestConcurrency: 25,
+          requestConcurrency: 50,
         },
       },
     },
