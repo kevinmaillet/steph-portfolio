@@ -3,6 +3,14 @@ module.exports = {
     siteUrl: 'https://www.stephmeltzer.com',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: false, // optional parameter to include script in development
+        id: '2839865',
+        sv: '6',
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
