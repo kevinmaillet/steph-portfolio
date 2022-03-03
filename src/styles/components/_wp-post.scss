@@ -6,36 +6,34 @@
 
   &__content {
     display: grid;
-    grid-template-columns:
-      1fr min(65ch, 100%) 1fr;
+    grid-template-columns: 1fr min(65ch, 100%) 1fr;
 
-    &>* {
+    & > * {
       grid-column: 2;
     }
 
-    &>.wp-block-image,
+    & > .wp-block-image,
     .wp-block-columns,
     .wp-block-group {
       width: 100%;
       grid-column: 1 / 4;
     }
 
-
     //Mobile
     @media screen and (max-width: 480px) {
-      &>.wp-block-file {
+      & > .wp-block-file {
         display: flex;
         flex-direction: column;
 
-        &>* {
+        & > * {
           padding: 2px 0;
         }
       }
+
+      .wp-block-columns {
+        padding: 0 1rem !important;
+      }
     }
-
-
-
-
 
     ul,
     ol {
@@ -43,7 +41,6 @@
 
       li {
         font-weight: var(--fontWeight-semibold);
-
       }
     }
   }
