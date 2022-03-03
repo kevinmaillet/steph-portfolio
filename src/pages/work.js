@@ -34,10 +34,11 @@ const Work = ({ data }) => {
 
 export const query = graphql`
   query wpPosts {
-    allWpPost {
+    allWpPost(sort: { fields: date, order: ASC }) {
       edges {
         node {
           title
+          date
           id
           slug
           categories {
