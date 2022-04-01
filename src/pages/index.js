@@ -13,6 +13,11 @@ const HomePage = ({ data }) => {
     <Layout>
       <Seo title="Home" />
       <section className="home">
+        <article
+          dangerouslySetInnerHTML={{ __html: data.wpPost.content }}
+          className="wp-post__content"
+          style={{ position: `absolute`, zIndex: `50`, paddingLeft: `10%` }}
+        />
         <GatsbyImage image={featuredImage} alt={altText} />
       </section>
     </Layout>
@@ -23,6 +28,7 @@ export const query = graphql`
   query getHomePost {
     wpPost(title: { eq: "Home" }) {
       id
+      content
       featuredImage {
         node {
           altText

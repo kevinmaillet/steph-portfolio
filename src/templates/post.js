@@ -7,7 +7,7 @@ import '../styles/vendor/@wordpress/build-style/style.css';
 import '../styles/vendor/@wordpress/build-style/theme.css';
 
 const BlogPostTemplate = ({ data }) => {
-  const containerRef = useRef(null)
+  const containerRef = useRef(null);
   useIntersectionObserverOnChildren(containerRef);
 
   return (
