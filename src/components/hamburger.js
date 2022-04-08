@@ -10,6 +10,7 @@ const Hamburger = () => {
       onKeyDown={() => setNavOpen(!isNavOpen)}
       role="button"
       tabIndex={0}
+      aria-label="hamburger menu button"
     >
       <span className="bar1"></span>
       <span className="bar2"></span>
