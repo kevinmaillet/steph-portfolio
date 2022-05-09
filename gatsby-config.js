@@ -34,14 +34,9 @@ module.exports = {
         icon: 'content/assets/favicon.png',
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-        },
-      },
-    },
+
+    `gatsby-plugin-sharp`,
+
     {
       resolve: 'gatsby-transformer-sharp',
     },
