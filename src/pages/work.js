@@ -34,7 +34,7 @@ const Work = ({ data }) => {
 
 export const query = graphql`
   query wpPosts {
-    allWpPost(sort: { fields: date, order: ASC }) {
+    allWpPost(sort: { fields: date, order: DESC }) {
       edges {
         node {
           title
